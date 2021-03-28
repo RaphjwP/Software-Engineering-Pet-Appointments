@@ -58,13 +58,13 @@
                 android:id="@+id/btnProfile"
                 android:layout_width="205dp"
                 android:layout_height="110dp"
-                app:srcCompat="@drawable/Profile" />
+                app:srcCompat="@drawable/profile" />
 
             <ImageView
                 android:id="@+id/btnScheduleHistory"
                 android:layout_width="205dp"
                 android:layout_height="110dp"
-                app:srcCompat="@drawable/History" />
+                app:srcCompat="@drawable/history" />
         </LinearLayout>
 
         <LinearLayout
@@ -82,7 +82,7 @@
                 android:id="@+id/btnFAQ"
                 android:layout_width="205dp"
                 android:layout_height="110dp"
-                app:srcCompat="@drawable/FAQBtn" />
+                app:srcCompat="@drawable/faqbtn" />
 
         </LinearLayout>
 
