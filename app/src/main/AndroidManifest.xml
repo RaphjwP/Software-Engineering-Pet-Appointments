@@ -22,6 +22,10 @@
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".ScheduleActivity"></activity>
         <activity android:name=".ClinicMenuActivity"></activity>
+        <activity android:name=".ClinicHistoryActivity"></activity>
+        <activity android:name=".ClinicAppointmentActivity"></activity>
+        <activity android:name=".ClinicProfileActivity"></activity>
+
         <activity android:name=".ChooseAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
