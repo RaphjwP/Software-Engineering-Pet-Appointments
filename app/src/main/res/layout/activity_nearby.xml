@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +12,8 @@
         android:ems="10"
         android:inputType="textPostalAddress"
         android:text="123 ABC st, Oakville, ON 1D2 3F4"
-        tools:layout_editor_absoluteX="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="103dp" />
 
     <TextView
@@ -22,15 +22,18 @@
         android:layout_height="wrap_content"
         android:text="Nearby Clinic"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="66dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Google Rating"
-        tools:layout_editor_absoluteX="285dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView41"
         tools:layout_editor_absoluteY="352dp" />
 
     <TextView
@@ -53,65 +56,79 @@
         android:id="@+id/imageView8"
         android:layout_width="60dp"
         android:layout_height="58dp"
-        app:srcCompat="@drawable/stethoscope"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="236dp" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:srcCompat="@drawable/stethoscope" />
 
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Google Rating"
-        tools:layout_editor_absoluteX="285dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
         tools:layout_editor_absoluteY="275dp" />
 
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
         android:text="Google Rating"
-        tools:layout_editor_absoluteX="285dp"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="202dp" />
-
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clinic Name"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="387dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bird Professional"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="275dp" />
-
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="8 km"
-        tools:layout_editor_absoluteX="342dp"
-        tools:layout_editor_absoluteY="314dp" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2 km"
-        tools:layout_editor_absoluteX="342dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
         tools:layout_editor_absoluteY="164dp" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Clinic Name"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Bird Professional"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="8 km"
+        app:layout_constraintBottom_toTopOf="@+id/textView40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toEndOf="@+id/textView42" />
 
     <TextView
         android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Amphibia Professional"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="425dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
     <TextView
         android:id="@+id/textView42"
@@ -126,7 +143,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dog, Cat Professional"
-        tools:layout_editor_absoluteX="118dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView36"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
         tools:layout_editor_absoluteY="202dp" />
 
     <TextView
@@ -134,87 +153,109 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4 km"
-        tools:layout_editor_absoluteX="342dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
         tools:layout_editor_absoluteY="237dp" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="60dp"
         android:layout_height="58dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/stethoscope"
-        tools:layout_editor_absoluteX="38dp"
         tools:layout_editor_absoluteY="163dp" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="12 km"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView39"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toEndOf="@+id/textView45" />
 
     <TextView
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Rodent Professional"
-        tools:layout_editor_absoluteX="118dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
         tools:layout_editor_absoluteY="352dp" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:text="Clinic Name"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="237dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        tools:layout_editor_absoluteX="118dp" />
 
     <TextView
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="240dp"
         android:text="Address"
-        tools:layout_editor_absoluteX="118dp"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="406dp" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="60dp"
         android:layout_height="58dp"
-        app:srcCompat="@drawable/stethoscope"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView46"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintVertical_bias="0.059"
+        app:srcCompat="@drawable/stethoscope" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="60dp"
         android:layout_height="58dp"
-        app:srcCompat="@drawable/stethoscope"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="313dp" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView37"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:srcCompat="@drawable/stethoscope" />
 
     <TextView
         android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:text="Google Rating"
-        tools:layout_editor_absoluteX="285dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
         tools:layout_editor_absoluteY="425dp" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Clinic Name"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        tools:layout_editor_absoluteY="163dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="61dp"
-        android:layout_height="56dp"
-        app:srcCompat="@drawable/cat"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="308dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Owner "
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="374dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="58dp"
-        app:srcCompat="@drawable/stethoscope"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="308dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,8 +12,45 @@
         android:text="Choose Your Account Type:"
         android:textColor="#070000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="64dp" />
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="84dp"
+        android:text="Clinic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="151dp"
+        android:layout_height="103dp"
+        app:srcCompat="@drawable/pet"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        app:srcCompat="@drawable/stethoscope"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Meet My Pet Buddy"
+        android:textColor="#070000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="323dp" />
 
     <TextView
         android:id="@+id/textView58"
@@ -48,22 +60,26 @@
         android:text="Welcome!"
         android:textColor="#070000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="32dp" />
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="84dp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clinic"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="374dp" />
+        android:layout_marginTop="8dp"
+        android:text="Owner "
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
 
     <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="134dp" />
+        android:id="@+id/imageView20"
+        android:layout_width="61dp"
+        android:layout_height="56dp"
+        app:srcCompat="@drawable/cat"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="416dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

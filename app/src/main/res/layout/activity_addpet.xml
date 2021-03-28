@@ -10,30 +10,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"
-        tools:layout_editor_absoluteX="91dp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="611dp" />
 
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="94dp"
         android:layout_height="110dp"
-        app:srcCompat="@drawable/addimage"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="138dp" />
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275"
+        app:srcCompat="@drawable/addimage" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        app:srcCompat="@drawable/upload"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="496dp" />
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView56"
+        app:srcCompat="@drawable/upload" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="92dp"
         android:layout_height="96dp"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="270dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView53">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -52,10 +62,13 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
         tools:layout_editor_absoluteY="138dp" />
 
     <Spinner
@@ -63,17 +76,20 @@
         android:layout_width="206dp"
         android:layout_height="34dp"
         android:spinnerMode="dropdown"
-        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteX="157dp"
         tools:layout_editor_absoluteY="411dp" />
 
     <TextView
         android:id="@+id/textView56"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Upload Document"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="455dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <TextView
         android:id="@+id/textView54"
@@ -81,8 +97,12 @@
         android:layout_height="wrap_content"
         android:text="Kind"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="379dp" />
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView53"
@@ -90,18 +110,23 @@
         android:layout_height="wrap_content"
         android:text="Gender"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="242dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="246dp" />
 
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="number"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="186dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        tools:layout_editor_absoluteY="183dp" />
 
     <TextView
         android:id="@+id/textView52"
@@ -109,15 +134,18 @@
         android:layout_height="wrap_content"
         android:text="Add Your Buddy"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
         android:text="Add"
-        tools:layout_editor_absoluteX="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="611dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
