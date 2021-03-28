@@ -247,10 +247,11 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnHistorySchedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
-            android:text="schedule Appointment"/>
+            android:text="schedule Appointment" />
 
 
         </LinearLayout>

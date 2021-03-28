@@ -17,17 +17,17 @@ class ClinicMenuActivity : AppCompatActivity()  {
         setContentView(binding.root)
 
         binding.btnClinicHistory.setOnClickListener {
-            var intent = Intent(this, ScheduleActivity::class.java)
+            var intent = Intent(this, ClinicHistoryActivity::class.java)
             startActivity(intent)
         }
 
         binding.btnClinicUpcoming.setOnClickListener {
-            var intent = Intent(this, ScheduleActivity::class.java)
+            var intent = Intent(this, ClinicAppointmentActivity::class.java)
             startActivity(intent)
         }
 
         binding.btnMyClinic.setOnClickListener {
-            var intent = Intent(this, ScheduleActivity::class.java)
+            var intent = Intent(this, ClinicProfileActivity::class.java)
             startActivity(intent)
         }
 
