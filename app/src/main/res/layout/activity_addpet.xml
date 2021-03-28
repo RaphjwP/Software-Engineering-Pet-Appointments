@@ -5,37 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnCancelAddPet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="611dp" />
-
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="94dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="132dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginBottom="384dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/addimage" />
+        app:srcCompat="@drawable/addimage"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="25dp"
-        android:layout_height="25dp"
-        app:srcCompat="@drawable/upload"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="496dp" />
+        android:layout_height="0dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="193dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView56"
+        app:srcCompat="@drawable/upload" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="92dp"
         android:layout_height="96dp"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="270dp">
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView54"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView53"
+        app:layout_constraintTop_toBottomOf="@+id/textView53">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -54,21 +58,38 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="136dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textView53"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="206dp"
-        android:layout_height="34dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
         android:spinnerMode="dropdown"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="411dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView56"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
     <TextView
         android:id="@+id/textView56"
@@ -76,8 +97,9 @@
         android:layout_height="wrap_content"
         android:text="Upload Document"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="455dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/spinner2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <TextView
         android:id="@+id/textView54"
@@ -85,47 +107,56 @@
         android:layout_height="wrap_content"
         android:text="Kind"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="379dp" />
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
     <TextView
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="137dp"
         android:text="Gender"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="242dp" />
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="184dp"
-        android:ems="10"
-        android:hint="Age"
-        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textView54"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="72dp"
         android:text="Add Your Buddy"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSubmitAddPet"
+        android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="87dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
         android:text="Add"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="611dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/button6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
