@@ -10,56 +10,71 @@
         android:id="@+id/textView55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-medium"
         android:text="Choose an Option:"
         android:textColor="#070000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
 
     <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnClinicUpcoming"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginBottom="404dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#8BC34A"
         android:text="Upcoming Appointments"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView55" />
 
     <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnClinicHistory"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#8BC34A"
         android:text="Clinic History"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClinicUpcoming" />
 
     <Button
-        android:id="@+id/button11"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnMyClinic"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginBottom="276dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#8BC34A"
         android:text="My Clinic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClinicHistory" />
 
     <ImageView
         android:id="@+id/imageView22"
         android:layout_width="130dp"
         android:layout_height="192dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginBottom="520dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pet" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:text="My Clinic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
