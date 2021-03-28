@@ -14,32 +14,41 @@
         android:text="Choose an Option:"
         android:textColor="#070000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="211dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="404dp"
         android:backgroundTint="#8BC34A"
         android:text="Upcoming Appointments"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:backgroundTint="#8BC34A"
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="340dp"
+        android:backgroundTint="#8BC34A"
         android:text="Clinic History"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="341dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView22"
         android:layout_width="130dp"
         android:layout_height="192dp"
-        app:srcCompat="@drawable/pet"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="19dp" />
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="520dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pet" />
 </androidx.constraintlayout.widget.ConstraintLayout>

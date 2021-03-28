@@ -10,60 +10,74 @@
         android:id="@+id/imageView20"
         android:layout_width="61dp"
         android:layout_height="56dp"
-        app:srcCompat="@drawable/cat"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="308dp" />
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="308dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="312dp"
         android:text="Owner "
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="374dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="60dp"
         android:layout_height="58dp"
-        app:srcCompat="@drawable/stethoscope"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="308dp" />
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stethoscope" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="sans-serif-medium"
         android:text="Choose Your Account Type:"
         android:textColor="#070000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView58" />
 
     <TextView
         android:id="@+id/textView58"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-medium"
         android:text="Welcome!"
         android:textColor="#070000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="32dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="312dp"
         android:text="Clinic"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="374dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="134dp" />
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="132dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
