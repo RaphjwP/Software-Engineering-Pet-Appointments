@@ -10,12 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeetMyPetBuddy">
         <activity android:name=".MainActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".AddPetActivity"></activity>
+        <activity android:name=".NearbyActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ScheduleActivity"></activity>
+        <activity android:name=".ClinicMenuActivity"></activity>
+        <activity android:name=".ChooseAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

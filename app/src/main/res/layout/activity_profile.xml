@@ -31,7 +31,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnViewHistory"
         android:layout_width="319dp"
         android:layout_height="46dp"
         android:backgroundTint="#4CAF50"
@@ -92,7 +92,7 @@
         tools:layout_editor_absoluteY="375dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAddPet"
         android:layout_width="319dp"
         android:layout_height="46dp"
         android:backgroundTint="#8BC34A"
