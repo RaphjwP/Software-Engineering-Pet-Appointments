@@ -17,7 +17,7 @@
         android:id="@+id/imageView15"
         android:layout_width="94dp"
         android:layout_height="110dp"
-        app:srcCompat="@drawable/addImage"
+        app:srcCompat="@drawable/addimage"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="138dp" />
 
