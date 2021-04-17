@@ -54,11 +54,18 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
-    // view models
     def lifecycle_version = "2.3.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
-    // needed so you can use the by viewModels() function
     def activity_version = "1.2.0"
     implementation "androidx.activity:activity-ktx:$activity_version"
+
+    // retrofit
+    def version_moshi = "1.8.0"
+    def version_retrofit = "2.9.0"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
+
+    // logging for retrofit
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 }
