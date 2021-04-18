@@ -25,6 +25,7 @@ class AppointmentController : ViewModel() {
         jsonObject.put("pet_type", appointment.pet_type)
         jsonObject.put("doctor_name", appointment.doctor_name)
         jsonObject.put("clinic_name", appointment.clinic_name)
+        jsonObject.put("clinic_address", appointment.clinic_address)
         jsonObject.put("date", appointment.date)
 
         val jsonObjectString = jsonObject.toString()
