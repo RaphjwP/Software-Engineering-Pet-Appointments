@@ -1,4 +1,4 @@
-package com.example.meetmypetbuddy
+package com.example.meetmypetbuddy.views
 
 import android.os.Bundle
 import android.util.Log
@@ -7,12 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.meetmypetbuddy.R
 import com.example.meetmypetbuddy.adapters.ReviewsAdapter
 import com.example.meetmypetbuddy.controllers.ClinicReviewActivityController
 import com.example.meetmypetbuddy.databinding.ActivityClinicReviewsBinding
 import com.example.meetmypetbuddy.models.Review
-import java.time.LocalDateTime
 
 class ClinicReviewActivity : AppCompatActivity() {
 
@@ -40,7 +39,5 @@ class ClinicReviewActivity : AppCompatActivity() {
 
 
     }
-
-
 
 }
