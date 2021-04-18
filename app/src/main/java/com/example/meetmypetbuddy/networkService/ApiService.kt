@@ -1,14 +1,20 @@
 package com.example.meetmypetbuddy.networkService
 
+import com.example.meetmypetbuddy.models.Appointment
 import com.example.meetmypetbuddy.models.Review
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Path
 
 private const val BASE_URL = "https://mmpb-api.herokuapp.com/"
 
@@ -28,9 +34,15 @@ private val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFact
 interface ApiService {
     @GET("/review/api/reviews")
     suspend fun getReviews(): Response<List<Review>>
+    @GET("/appointments")
+    suspend fun getAppointments(): Response<List<Appointment>>
+    @GET("/appointments/{owner_name}")
+    suspend fun getUserAppointments(@Path("owner_name") owner_name: String ): Response<List<Appointment>>
+    @POST("/appointments")
+    suspend fun placeAnAppointment(@Body requestBody: RequestBody): Response<ResponseBody>
 }
 
-object ReviewApi {
+object Api {
     val retrofitService : ApiService by lazy {
         retrofit.create(ApiService::class.java)
     }
