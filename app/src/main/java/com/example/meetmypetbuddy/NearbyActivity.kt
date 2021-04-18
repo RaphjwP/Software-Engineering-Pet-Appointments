@@ -2,8 +2,10 @@ package com.example.meetmypetbuddy
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.meetmypetbuddy.databinding.ActivityChooseAccountBinding
+import com.example.meetmypetbuddy.controllers.ClinicReviewActivityController
 import com.example.meetmypetbuddy.databinding.ActivityNearbyBinding
 
 class NearbyActivity : AppCompatActivity() {
@@ -22,6 +24,4 @@ class NearbyActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
 }

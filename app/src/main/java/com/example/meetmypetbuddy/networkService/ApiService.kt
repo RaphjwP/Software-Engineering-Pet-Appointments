@@ -26,11 +26,11 @@ private val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFact
     getHttpClient()).build()
 
 interface ApiService {
-    @GET("/api/reviews")
-    suspend fun getAppointments(): Response<List<Review>>
+    @GET("/review/api/reviews")
+    suspend fun getReviews(): Response<List<Review>>
 }
 
-object UsersAppi {
+object ReviewApi {
     val retrofitService : ApiService by lazy {
         retrofit.create(ApiService::class.java)
     }

@@ -14,6 +14,5 @@ class ClinicAppointmentActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         this.binding = ActivityUpcomingAppointmentsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
     }
 }

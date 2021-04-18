@@ -26,6 +26,7 @@
         <activity android:name=".ClinicHistoryActivity"></activity>
         <activity android:name=".ClinicAppointmentActivity"></activity>
         <activity android:name=".ClinicProfileActivity"></activity>
+        <activity android:name=".ClinicReviewActivity"></activity>
 
         <activity android:name=".ChooseAccountActivity">
             <intent-filter>

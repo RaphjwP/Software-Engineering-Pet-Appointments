@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:clickble="true"
+    android:clickable="true"
     android:layout_height="match_parent">
 
     <EditText
@@ -64,6 +64,7 @@
         android:layout_width="60dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/textView18"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
@@ -177,11 +178,13 @@
         android:id="@+id/imgClinic1"
         android:layout_width="60dp"
         android:layout_height="0dp"
+        android:layout_marginTop="21dp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@+id/textView15"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"
         app:srcCompat="@drawable/stethoscope" />
 
     <TextView
@@ -226,21 +229,25 @@
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="240dp"
+        android:layout_marginStart="20dp"
         android:text="Address"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgClinic4"
         app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
     <ImageView
         android:id="@+id/imgClinic4"
         android:layout_width="60dp"
         android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toStartOf="@+id/textView46"
-        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgClinic3"
-        app:layout_constraintVertical_bias="0.059"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/stethoscope" />
 
     <ImageView
@@ -248,6 +255,7 @@
         android:layout_width="60dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/textView37"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
@@ -280,10 +288,13 @@
         android:layout_width="338dp"
         android:layout_height="265dp"
         android:layout_marginStart="37dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="36dp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44"
         app:srcCompat="@drawable/img_nearby_clinic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
