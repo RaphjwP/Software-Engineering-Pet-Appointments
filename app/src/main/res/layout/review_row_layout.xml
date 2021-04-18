@@ -55,19 +55,18 @@
 
             <RatingBar
                 android:id="@+id/ratingBar2"
+                style="?android:attr/ratingBarStyleIndicator"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
-                style="?android:attr/ratingBarStyleIndicator"
-                android:rating="@{bndReview.rating}"
-                android:numStars="5" />
+                android:numStars="5"
+                android:rating="@{bndReview.rating}" />
 
             <TextView
                 android:id="@+id/reviewRecyclerRatingNum"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
+                android:layout_height="40dp"
                 android:text="@{bndReview.rating_string}" />
         </LinearLayout>
     </LinearLayout>

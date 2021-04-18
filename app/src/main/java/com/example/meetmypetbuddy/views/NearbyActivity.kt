@@ -19,8 +19,25 @@ class NearbyActivity : AppCompatActivity() {
 
         binding.imgClinic2.setOnClickListener {
             var intent = Intent(this, ClinicReviewActivity::class.java)
-            intent.putExtra("Clinic_name", "Animal Hospital of Oakville")
+            intent.putExtra("Clinic_name", "Clinic of Oakville")
             intent.putExtra("user", "customer")
+            intent.putExtra("address", "126 ABC st")
+            startActivity(intent)
+        }
+
+        binding.imgClinic21.setOnClickListener {
+            var intent = Intent(this, ClinicReviewActivity::class.java)
+            intent.putExtra("Clinic_name", "Animal Hospital")
+            intent.putExtra("user", "customer")
+            intent.putExtra("address", "166 EFG st")
+            startActivity(intent)
+        }
+
+        binding.imgClinic212.setOnClickListener {
+            var intent = Intent(this, ClinicReviewActivity::class.java)
+            intent.putExtra("Clinic_name", "Upperpet Hospital")
+            intent.putExtra("user", "customer")
+            intent.putExtra("address", "87 ZYQ st")
             startActivity(intent)
         }
     }

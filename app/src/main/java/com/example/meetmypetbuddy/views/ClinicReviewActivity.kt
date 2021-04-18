@@ -1,5 +1,6 @@
 package com.example.meetmypetbuddy.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
@@ -29,7 +30,6 @@ class ClinicReviewActivity : AppCompatActivity() {
         binding.rvReview.layoutManager = LinearLayoutManager(this)
 
         val reviewDataChanged = Observer<List<Review>> {
-            // if the list of data is NOT null, then populate the adapter
             if (!it.isNullOrEmpty()) {
                 binding.rvReview.adapter = ReviewsAdapter(it)
             }
@@ -37,6 +37,38 @@ class ClinicReviewActivity : AppCompatActivity() {
 
         vm.reviewList.observe(this, reviewDataChanged)
 
+        //Calculate rating average
+        getRatingAverage()
+
+        // Set view
+        val clinicName: String = intent.getStringExtra("Clinic_name").toString()
+        binding.clinicName.text = clinicName
+        val address: String = intent.getStringExtra("address").toString()
+        binding.clinicAddress.text = address
+        val doctorName = "Dr. Soft"
+
+        binding.btnWriteReview.setOnClickListener {
+            var intent = Intent(this, WriteReviewActivity::class.java)
+            intent.putExtra("Clinic_name", clinicName)
+            intent.putExtra("doctor_name", doctorName)
+            startActivity(intent)
+        }
+
+    }
+
+    fun getRatingAverage() {
+        var ratingReviews: List<Review>? = vm.reviewList.value
+        var rating_avg: Float = 0F
+        var counter: Int = 0
+        if (ratingReviews != null) {
+            ratingReviews.forEach {
+                counter += 1
+                rating_avg += it.rating
+            }
+        }
+
+        binding.reviewRatingBar.rating = rating_avg
+        binding.ratingNumber.text = rating_avg.toString()
     }
 
 }

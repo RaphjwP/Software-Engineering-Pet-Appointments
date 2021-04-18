@@ -29,24 +29,24 @@
                 app:srcCompat="@drawable/clinic" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/clinicName"
-                    android:layout_width="222dp"
-                    android:layout_height="38dp"
-                    android:text="TextView"
-                    android:textSize="34sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clinic Name"
+                    android:textSize="18sp"
                     tools:layout_editor_absoluteX="173dp"
                     tools:layout_editor_absoluteY="21dp" />
 
                 <TextView
                     android:id="@+id/clinicAddress"
-                    android:layout_width="222dp"
-                    android:layout_height="21dp"
-                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="567 Address St"
                     tools:layout_editor_absoluteX="173dp"
                     tools:layout_editor_absoluteY="67dp" />
 
@@ -61,20 +61,19 @@
                     tools:layout_editor_absoluteY="128dp" />
 
                 <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="222dp"
-                    android:layout_height="21dp"
-                    android:text="TextView"
-                    tools:layout_editor_absoluteX="173dp"
-                    tools:layout_editor_absoluteY="99dp" />
-
-                <TextView
                     android:id="@+id/ratingNumber"
                     android:layout_width="61dp"
                     android:layout_height="16dp"
-                    android:text="TextView"
+                    android:text="4"
                     tools:layout_editor_absoluteX="265dp"
                     tools:layout_editor_absoluteY="128dp" />
+
+                <Button
+                    android:id="@+id/btnWriteReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Write a review" />
 
             </LinearLayout>
 

@@ -5,6 +5,7 @@ import com.example.meetmypetbuddy.models.Review
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
@@ -40,6 +41,8 @@ interface ApiService {
     suspend fun getUserAppointments(@Path("owner_name") owner_name: String ): Response<List<Appointment>>
     @POST("/appointments")
     suspend fun placeAnAppointment(@Body requestBody: RequestBody): Response<ResponseBody>
+    @POST("/review/api/reviews")
+    suspend fun insertReview(@Body requestBody: RequestBody) : Response<ResponseBody>
 }
 
 object Api {

@@ -9,6 +9,9 @@ import com.example.meetmypetbuddy.models.Appointment
 import com.example.meetmypetbuddy.models.Review
 import com.example.meetmypetbuddy.networkService.Api
 import kotlinx.coroutines.launch
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
+import org.json.JSONObject
 
 class ClinicReviewActivityController : ViewModel(){
     var reviewList = MutableLiveData<List<Review>>()
@@ -32,4 +35,28 @@ class ClinicReviewActivityController : ViewModel(){
             }
         }
     }
+
+    fun postReviewToAPI(review: Review){
+        val jsonObject = JSONObject()
+        jsonObject.put("written_by", review.written_by)
+        jsonObject.put("review_description", review.review_description)
+        jsonObject.put("clinic_name", review.clinic_name)
+        jsonObject.put("doctor_name", review.doctor_name)
+        jsonObject.put("date", review.date)
+        jsonObject.put("rating", review.rating)
+        jsonObject.put("feedback_given", review.feedback_given)
+
+        val jsonObjectString = jsonObject.toString()
+        val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
+
+        viewModelScope.launch {
+            try{
+                val response = Api.retrofitService.insertReview(requestBody);
+                Log.d("RPT", response.toString());
+            }catch (e:Exception){
+                Log.d("RPT", e.toString());
+            }
+        }
+    }
+
 }
