@@ -13,6 +13,7 @@ import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import java.util.*
+import kotlin.math.log
 
 class AppointmentController : ViewModel() {
 
@@ -67,6 +68,24 @@ class AppointmentController : ViewModel() {
                 appointmentList.value = response.body()!!
             } catch (e: Exception) {
                 Log.d("ABC", "Error: ${e.message}")
+            }
+        }
+    }
+
+    fun getClinicAppointment(name: String) {
+        viewModelScope.launch {
+            try {
+                val response = Api.retrofitService.getClinicsAppointment(name)
+                if (response.isSuccessful && response.body() != null){
+                    Log.d("ABC", "I got a response from the API")
+                    Log.d("ABC", response.body()!!.toString())
+                    appointmentList.value = response.body()!!
+                }else{
+                    Log.d("SRC","Err")
+                }
+
+            } catch (e: Exception) {
+                Log.d("SAC", "Error: ${e.message}")
             }
         }
     }

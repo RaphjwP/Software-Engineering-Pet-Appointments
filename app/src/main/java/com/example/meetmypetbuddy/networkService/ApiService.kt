@@ -35,12 +35,19 @@ private val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFact
 interface ApiService {
     @GET("/review/api/reviews")
     suspend fun getReviews(): Response<List<Review>>
+
     @GET("/appointments")
     suspend fun getAppointments(): Response<List<Appointment>>
+
     @GET("/appointments/{owner_name}")
     suspend fun getUserAppointments(@Path("owner_name") owner_name: String ): Response<List<Appointment>>
+
+    @GET("/appointments/clinics/{clinic_name}")
+    suspend fun getClinicsAppointment(@Path("clinic_name") clinic_name: String ): Response<List<Appointment>>
+
     @POST("/appointments")
     suspend fun placeAnAppointment(@Body requestBody: RequestBody): Response<ResponseBody>
+
     @POST("/review/api/reviews")
     suspend fun insertReview(@Body requestBody: RequestBody) : Response<ResponseBody>
 }
