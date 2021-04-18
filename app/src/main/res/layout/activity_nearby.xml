@@ -6,295 +6,473 @@
     android:clickable="true"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextTextPostalAddress"
-        android:layout_width="335dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="22dp"
-        android:ems="10"
-        android:inputType="textPostalAddress"
-        android:text="123 ABC st, Oakville, ON 1D2 3F4"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nearby Clinics"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPostalAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487" />
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Nearby Clinics"
+            android:textSize="24sp"/>
 
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:text="Google Rating"
-        app:layout_constraintBottom_toTopOf="@+id/textView43"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView41" />
+        <EditText
+            android:id="@+id/editTextTextPostalAddress"
+            android:layout_width="335dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="22dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:text="123 ABC st, Oakville, ON 1D2 3F4" />
 
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        app:layout_constraintStart_toStartOf="@+id/textView42"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/imgClinic2"
+                android:layout_marginEnd="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/textView18"
+                app:layout_constraintHorizontal_bias="0.655"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgClinic1"
+                app:srcCompat="@drawable/stethoscope" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="118dp"
-        android:layout_marginEnd="117dp"
-        android:text="Address"
-        app:layout_constraintEnd_toStartOf="@+id/textView36"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Mac Animal Clinic" />
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="126 ABC st"/>
+                    <TextView
+                        android:id="@+id/textView388"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oakville,ON 1D2 3F4"/>
 
-    <ImageView
-        android:id="@+id/imgClinic2"
-        android:layout_width="60dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toStartOf="@+id/textView18"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgClinic1"
-        app:srcCompat="@drawable/stethoscope" />
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Dog, Cat Professional"
+                        android:textColor="#009688" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:text="Google Rating"
-        app:layout_constraintBottom_toTopOf="@+id/textView38"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.632"
-        app:layout_constraintStart_toEndOf="@+id/textView21" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RatingBar
+                        android:id="@+id/reviewRatingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="4.4"
+                        tools:layout_editor_absoluteX="173dp"
+                        tools:layout_editor_absoluteY="128dp" />
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_gravity="right
+"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 km" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="202dp"
-        android:layout_marginEnd="36dp"
-        android:text="Google Rating"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/imgClinic21"
+                android:layout_marginEnd="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/textView18"
+                app:layout_constraintHorizontal_bias="0.655"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgClinic1"
+                app:srcCompat="@drawable/stethoscope" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:text="2 km"
-        app:layout_constraintBottom_toTopOf="@+id/textView36"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
-        app:layout_constraintStart_toEndOf="@+id/textView14" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView451"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Animal Hospital" />
+                    <TextView
+                        android:id="@+id/textView371"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="166 EFG st"/>
+                    <TextView
+                        android:id="@+id/textView3881"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oakville,ON 1K2 3H4"/>
 
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:text="Clinic Name"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic4"
-        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+                    <TextView
+                        android:id="@+id/textView151"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bird Professional"
+                        android:textColor="#009688" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="1dp"
-        android:text="Bird Professional"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic2"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RatingBar
+                        android:id="@+id/reviewRatingBar1"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="4"
+                        tools:layout_editor_absoluteX="173dp"
+                        tools:layout_editor_absoluteY="128dp" />
+                    <TextView
+                        android:id="@+id/textView171"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4 km" />
+                </LinearLayout>
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="8 km"
-        app:layout_constraintBottom_toTopOf="@+id/textView40"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toEndOf="@+id/textView42" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Amphibian Professional"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic4"
-        app:layout_constraintTop_toBottomOf="@+id/textView46" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/imgClinic212"
+                android:layout_marginEnd="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/textView18"
+                app:layout_constraintHorizontal_bias="0.655"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgClinic1"
+                app:srcCompat="@drawable/stethoscope" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Clinic Name"
-        app:layout_constraintStart_toStartOf="@+id/textView21"
-        app:layout_constraintTop_toTopOf="@+id/imgClinic3" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView4512"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Upper Pet Hospital" />
+                    <TextView
+                        android:id="@+id/textView3712"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="87 ZYQ st"/>
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oakville,ON 1H2 3L4"/>
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Dog, Cat Professional"
-        app:layout_constraintEnd_toStartOf="@+id/textView36"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic1"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                    <TextView
+                        android:id="@+id/textView513"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Reptiles Professional"
+                        android:textColor="#009688" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="4 km"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RatingBar
+                        android:id="@+id/reviewRatingBar12"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:rating="3.5"
+                        tools:layout_editor_absoluteX="173dp"
+                        tools:layout_editor_absoluteY="128dp" />
+                    <TextView
+                        android:id="@+id/textView1712"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4 km" />
+                </LinearLayout>
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgClinic1"
-        android:layout_width="60dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="21dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/textView15"
-        app:layout_constraintEnd_toStartOf="@+id/textView16"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"
-        app:srcCompat="@drawable/stethoscope" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="12 km"
-        app:layout_constraintBottom_toTopOf="@+id/textView39"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
-        app:layout_constraintStart_toEndOf="@+id/textView45" />
 
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Rodent Professional"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic3"
-        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="338dp"
+            android:layout_height="265dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/img_nearby_clinic" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:text="Clinic Name"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic2"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintStart_toStartOf="@+id/textView20" />
 
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Address"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic4"
-        app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
-    <ImageView
-        android:id="@+id/imgClinic4"
-        android:layout_width="60dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toStartOf="@+id/textView46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgClinic3"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/stethoscope" />
 
-    <ImageView
-        android:id="@+id/imgClinic3"
-        android:layout_width="60dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toStartOf="@+id/textView37"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgClinic2"
-        app:srcCompat="@drawable/stethoscope" />
 
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Google Rating"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView44"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toEndOf="@+id/textView44" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="21dp"
-        android:text="Clinic Name"
-        app:layout_constraintStart_toEndOf="@+id/imgClinic1"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="338dp"
-        android:layout_height="265dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="36dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView44"
-        app:srcCompat="@drawable/img_nearby_clinic" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView18"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="118dp"-->
+<!--        android:layout_marginEnd="117dp"-->
+<!--        android:text="Address"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/textView36"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView20" />-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView35"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="18dp"-->
+<!--        android:text="Google Rating"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView38"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.632"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView21" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView36"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="202dp"-->
+<!--        android:layout_marginEnd="36dp"-->
+<!--        android:text="Google Rating"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView21"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:text="Bird Professional"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imgClinic2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView18" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView38"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:text="8 km"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView40"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.807"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView42" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView44"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="Amphibian Professional"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imgClinic4"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView46" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView42"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Clinic Name"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView21"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imgClinic3" />-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView19"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="4 km"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.796"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView20"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView36" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgClinic1"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="21dp"-->
+<!--        android:clickable="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/textView15"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/textView16"-->
+<!--        app:layout_constraintHorizontal_bias="0.655"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"-->
+<!--        app:srcCompat="@drawable/stethoscope" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView43"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="12 km"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView39"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.797"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView45" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView41"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="Rodent Professional"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imgClinic3"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView37" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView20"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="Clinic Name"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imgClinic2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView16"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Address"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView15"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView20" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView46"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="Address"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imgClinic4"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView45" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgClinic4"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="39dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:clickable="true"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/imageView7"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/textView46"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imgClinic3"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/stethoscope" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgClinic3"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:clickable="true"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/textView37"-->
+<!--        app:layout_constraintHorizontal_bias="0.655"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imgClinic2"-->
+<!--        app:srcCompat="@drawable/stethoscope" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView39"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="Google Rating"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/textView44"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.052"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView44" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView14"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="21dp"-->
+<!--        android:text="Clinic Name"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imgClinic1"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
