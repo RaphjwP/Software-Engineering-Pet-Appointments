@@ -13,20 +13,21 @@ class ClinicReviewActivityController : ViewModel(){
     var reviewList = MutableLiveData<List<Review>>()
 
     fun fetchReviewFromAPI(){
+        Log.d("ABC", "fetchReviewFromAPI called")
         viewModelScope.launch {
             try {
                 val response = ReviewApi.retrofitService.getReviews()
                 if (response.isSuccessful && response.body() != null) {
-                    Log.d(TAG, "I got a response from the API")
-                    Log.d(TAG, response.body()!!.toString())
+                    Log.d("ABC", "I got a response from the API")
+                    Log.d("ABC", response.body()!!.toString())
                     reviewList.value = response.body()!!
                 }
                 else {
-                    Log.d(TAG, "Error occured when getting the response from the API")
+                    Log.d("ABC", "Error occured when getting the response from the API")
                 }
             }
             catch(e:Exception) {
-                Log.d(TAG, "Error: ${e.message}")
+                Log.d("ABC", "Error: ${e.message}")
             }
         }
     }

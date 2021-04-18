@@ -40,6 +40,4 @@ class ClinicReviewActivity : AppCompatActivity() {
 
     }
 
-
-
 }
