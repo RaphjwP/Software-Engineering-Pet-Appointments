@@ -37,7 +37,6 @@ class ClinicReviewActivity : AppCompatActivity() {
 
         vm.reviewList.observe(this, reviewDataChanged)
 
-
     }
 
 }

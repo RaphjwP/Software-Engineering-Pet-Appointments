@@ -17,7 +17,7 @@ class NearbyActivity : AppCompatActivity() {
         this.binding = ActivityNearbyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.imgClinic1.setOnClickListener {
+        binding.imgClinic2.setOnClickListener {
             var intent = Intent(this, ClinicReviewActivity::class.java)
             intent.putExtra("Clinic_name", "Animal Hospital of Oakville")
             intent.putExtra("user", "customer")
