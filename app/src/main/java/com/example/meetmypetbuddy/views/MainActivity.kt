@@ -1,4 +1,4 @@
-package com.example.meetmypetbuddy
+package com.example.meetmypetbuddy.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

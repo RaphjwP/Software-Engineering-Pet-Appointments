@@ -1,18 +1,18 @@
-package com.example.meetmypetbuddy
+package com.example.meetmypetbuddy.views
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.meetmypetbuddy.databinding.ActivityClinicHistoryBinding
 import com.example.meetmypetbuddy.databinding.ActivityClinicMenuBinding
 import com.example.meetmypetbuddy.databinding.ActivityUpcomingAppointmentsBinding
 
-class ClinicHistoryActivity : AppCompatActivity(){
+class ClinicAppointmentActivity : AppCompatActivity(){
 
-    private lateinit var binding: ActivityClinicHistoryBinding
+    private lateinit var binding: ActivityUpcomingAppointmentsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        this.binding = ActivityClinicHistoryBinding.inflate(layoutInflater)
+        this.binding = ActivityUpcomingAppointmentsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
     }

@@ -1,9 +1,8 @@
-package com.example.meetmypetbuddy
+package com.example.meetmypetbuddy.views
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.meetmypetbuddy.databinding.ActivityProfileBinding
 import com.example.meetmypetbuddy.databinding.ActivityScheduleBinding
 
 class ScheduleActivity : AppCompatActivity()  {
