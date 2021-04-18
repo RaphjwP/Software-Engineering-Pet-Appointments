@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="bndPet"
+            type="com.example.meetmypetbuddy.models.Pet"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <ImageView
+                android:gravity="center"
+                android:id="@+id/petImage3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:srcCompat="@drawable/dog"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/text12223"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pet Name"
+                            android:layout_marginEnd="24dp"
+                            android:textColor="#000000" />
+                        <TextView
+                            android:id="@+id/txtAge1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Age"
+                            android:textColor="#000000" />
+                        <TextView
+                            android:id="@+id/tbGen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="Gender"/>
+                        <TextView
+                            android:id="@+id/tbType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="Kind"/>
+                        <TextView
+                            android:id="@+id/tbBreed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="Breed"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/petName3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{bndPet.name}" />
+                        <TextView
+                            android:id="@+id/txtVetName1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{bndPet.age}" />
+                        <TextView
+                            android:id="@+id/txtGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{bndPet.gender}" />
+                        <TextView
+                            android:id="@+id/txtPetType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{bndPet.type}" />
+                        <TextView
+                            android:id="@+id/txtPetBreed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{bndPet.breed}" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/imageView210"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_menu_info_details" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
