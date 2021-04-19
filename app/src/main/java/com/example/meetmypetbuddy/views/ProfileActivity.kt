@@ -11,10 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.meetmypetbuddy.R
 import com.example.meetmypetbuddy.adapters.PetsAdapter
 import com.example.meetmypetbuddy.adapters.ReviewsAdapter
-import com.example.meetmypetbuddy.controllers.ClinicReviewActivityController
+//import com.example.meetmypetbuddy.controllers.ClinicReviewActivityController
 import com.example.meetmypetbuddy.controllers.MessageController
 import com.example.meetmypetbuddy.controllers.PetController
 import com.example.meetmypetbuddy.databinding.ActivityProfileBinding
+import com.example.meetmypetbuddy.databinding.ActivityUpcomingAppointmentsBinding
 import com.example.meetmypetbuddy.models.Pet
 import com.example.meetmypetbuddy.models.Review
 
@@ -26,8 +27,10 @@ class ProfileActivity : AppCompatActivity()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.binding = ActivityProfileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
-
+//
         Log.d("ABC", "Calling the api from the main activity!")
         vm.getPetsFromApi()
 

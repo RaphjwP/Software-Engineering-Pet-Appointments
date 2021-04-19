@@ -37,12 +37,11 @@ class PetController : ViewModel(){
 
     fun insertNewPet(pet: Pet){
         val jsonObject = JSONObject()
-        jsonObject.put("name", pet.name)
-        jsonObject.put("age", pet.age)
-        jsonObject.put("type", pet.type)
-        jsonObject.put("gender", pet.gender)
-        jsonObject.put("breed", pet.breed)
-        jsonObject.put("animal_clinic", pet.animal_clinic)
+        jsonObject.put("name", pet.pet_name)
+        jsonObject.put("age", pet.pet_age)
+        jsonObject.put("type", pet.pet_type)
+        jsonObject.put("breed", pet.pet_breed)
+        jsonObject.put("animal_clinic", pet.clinic_name)
         jsonObject.put("assigned_vet", pet.assigned_vet)
 
         val jsonObjectString = jsonObject.toString()

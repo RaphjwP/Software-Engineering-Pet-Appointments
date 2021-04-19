@@ -20,12 +20,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="10dp">
+
             <ImageView
-                android:gravity="center"
                 android:id="@+id/petImage3"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                app:srcCompat="@drawable/dog"/>
+                android:gravity="center"
+                app:srcCompat="@drawable/dog" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +42,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/text12223"
+                            android:id="@+id/txtview31"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pet Name"
@@ -77,36 +79,33 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/petName3"
+                            android:id="@+id/txtView18"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.name}" />
+                            android:text="@{bndPet.pet_name}" />
+
                         <TextView
-                            android:id="@+id/txtVetName1"
+                            android:id="@+id/txtView240"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.age}" />
+                            android:text="@{bndPet.pet_age_string}" />
+
                         <TextView
-                            android:id="@+id/txtGender"
+                            android:id="@+id/txtView20"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.gender}" />
+                            android:text="Female" />
                         <TextView
-                            android:id="@+id/txtPetType"
+                            android:id="@+id/txtView21"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.type}" />
+                            android:text="@{bndPet.pet_type}" />
                         <TextView
-                            android:id="@+id/txtPetBreed"
+                            android:id="@+id/txtView22"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.breed}" />
+                            android:text="@{bndPet.pet_breed}" />
                     </LinearLayout>
-                    <ImageView
-                        android:id="@+id/imageView210"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@android:drawable/ic_menu_info_details" />
                 </LinearLayout>
 
             </LinearLayout>

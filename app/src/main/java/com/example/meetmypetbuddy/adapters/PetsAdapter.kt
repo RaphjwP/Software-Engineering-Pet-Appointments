@@ -8,7 +8,7 @@ import com.example.meetmypetbuddy.databinding.PetRowLayoutBinding
 import com.example.meetmypetbuddy.models.Pet
 import com.example.meetmypetbuddy.models.Review
 
-class PetsViewHodler(private val binding: PetRowLayoutBinding) :RecyclerView.ViewHolder(binding.root){
+class PetsViewHolder(private val binding: PetRowLayoutBinding) :RecyclerView.ViewHolder(binding.root){
     fun bind(p:Pet){
         binding.bndPet = p
         binding.executePendingBindings()
@@ -16,21 +16,24 @@ class PetsViewHodler(private val binding: PetRowLayoutBinding) :RecyclerView.Vie
 }
 
 
-class PetsAdapter(private val pets: List<Pet>)
-    :RecyclerView.Adapter<PetsViewHodler>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetsViewHodler {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = PetRowLayoutBinding.inflate(layoutInflater, parent, false)
+class PetsAdapter(private val pets: List<Pet>) :RecyclerView.Adapter<PetsViewHolder>()
+{
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetsViewHolder {
+        val context = parent.context
+        val inflater = LayoutInflater.from(context)
 
-        return PetsViewHodler(binding)
+        val binding = PetRowLayoutBinding.inflate(inflater)
+
+        return PetsViewHolder(binding)
+    }
+
+
+    override fun onBindViewHolder(holder: PetsViewHolder, position: Int) {
+        val pet: Pet = pets.get(position)
+        holder.bind(pet)
     }
 
     override fun getItemCount(): Int {
-        return pets.size
-    }
-
-    override fun onBindViewHolder(holder: PetsViewHodler, position: Int) {
-        val currPet = this.pets.get(position)
-        holder?.bind(currPet)
+       return pets.size
     }
 }

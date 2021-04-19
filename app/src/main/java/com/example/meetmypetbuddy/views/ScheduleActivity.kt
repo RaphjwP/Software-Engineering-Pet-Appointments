@@ -44,9 +44,9 @@ class ScheduleActivity : AppCompatActivity()  {
         binding.btnScheduleSubmit.setOnClickListener {
             //test user and pet
             val user = UserTest()
-            val pet = Pet("Murzik", 2, "Cat", "Male", "Siamese", "Lera's Hospitality", "Dr. Lera")
+            val pet = Pet("Murzik", 2, "Cat", "Siamese", "Lera's Hospitality", "Dr. Lera")
 
-            val appointment = Appointment(user.name, pet.type, pet.assigned_vet, pet.animal_clinic, "Trafalgar St. 124", calendar.time.toString());
+            val appointment = Appointment(user.name, pet.pet_type, pet.assigned_vet, pet.clinic_name, "Trafalgar St. 124", calendar.time.toString());
             vm.placeAnAppointment(appointment)
 
             var intent = Intent(this, MainActivity::class.java)

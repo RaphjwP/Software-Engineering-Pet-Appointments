@@ -1,3 +1,5 @@
 package com.example.meetmypetbuddy.models
 
-data class Pet (val name:String, val age:Int, val type:String, val gender:String, val breed:String, val animal_clinic:String, val assigned_vet:String)
+data class Pet (val pet_name:String, val pet_age:Int, val pet_type:String, val pet_breed:String,  val assigned_vet:String, val clinic_name: String){
+    val pet_age_string = pet_age.toString()
+}
