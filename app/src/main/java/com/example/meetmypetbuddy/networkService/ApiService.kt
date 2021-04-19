@@ -1,6 +1,8 @@
 package com.example.meetmypetbuddy.networkService
 
 import com.example.meetmypetbuddy.models.Appointment
+import com.example.meetmypetbuddy.models.Message
+import com.example.meetmypetbuddy.models.Pet
 import com.example.meetmypetbuddy.models.Review
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -43,6 +45,15 @@ interface ApiService {
     suspend fun placeAnAppointment(@Body requestBody: RequestBody): Response<ResponseBody>
     @POST("/review/api/reviews")
     suspend fun insertReview(@Body requestBody: RequestBody) : Response<ResponseBody>
+    @POST("/msg/api/")
+    suspend fun insertMessage(@Body requestBody: RequestBody) : Response<ResponseBody>
+    @GET("/msg/api/msg/pet/{pet_name}")
+    suspend fun getMessagePet(@Path("pet_name") pet_name: String): Response<List<Message>>
+    @GET("/pets/")
+    suspend fun getPets(): Response<List<Pet>>
+    @POST("/pets/")
+    suspend fun insertNewPet(@Body requestBody: RequestBody) : Response<ResponseBody>
+
 }
 
 object Api {

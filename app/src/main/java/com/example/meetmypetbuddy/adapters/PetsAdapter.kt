@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.meetmypetbuddy.databinding.PetRowLayoutBinding
 import com.example.meetmypetbuddy.models.Pet
+import com.example.meetmypetbuddy.models.Review
 
 class PetsViewHodler(private val binding: PetRowLayoutBinding) :RecyclerView.ViewHolder(binding.root){
     fun bind(p:Pet){
@@ -15,7 +16,7 @@ class PetsViewHodler(private val binding: PetRowLayoutBinding) :RecyclerView.Vie
 }
 
 
-class PetsAdapter(val pets:MutableList<Pet>, val context: Context)
+class PetsAdapter(private val pets: List<Pet>)
     :RecyclerView.Adapter<PetsViewHodler>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetsViewHodler {
         val layoutInflater = LayoutInflater.from(parent.context)
