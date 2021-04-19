@@ -10,13 +10,14 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.meetmypetbuddy.R
 import com.example.meetmypetbuddy.adapters.ReviewsAdapter
-import com.example.meetmypetbuddy.controllers.ClinicReviewActivityController
+import com.example.meetmypetbuddy.controllers.ReviewController
 import com.example.meetmypetbuddy.databinding.ActivityClinicReviewsBinding
 import com.example.meetmypetbuddy.models.Review
 
+
 class ClinicReviewActivity : AppCompatActivity() {
 
-    private val vm: ClinicReviewActivityController by viewModels()
+    private val vm: ReviewController by viewModels()
 
     private lateinit var binding: ActivityClinicReviewsBinding
 
@@ -32,13 +33,11 @@ class ClinicReviewActivity : AppCompatActivity() {
         val reviewDataChanged = Observer<List<Review>> {
             if (!it.isNullOrEmpty()) {
                 binding.rvReview.adapter = ReviewsAdapter(it)
+                getRatingAverage()
             }
         }
 
         vm.reviewList.observe(this, reviewDataChanged)
-
-        //Calculate rating average
-        getRatingAverage()
 
         // Set view
         val clinicName: String = intent.getStringExtra("Clinic_name").toString()
@@ -49,7 +48,7 @@ class ClinicReviewActivity : AppCompatActivity() {
 
         binding.btnWriteReview.setOnClickListener {
             var intent = Intent(this, WriteReviewActivity::class.java)
-            intent.putExtra("Clinic_name", clinicName)
+            intent.putExtra("clinic_name", clinicName)
             intent.putExtra("doctor_name", doctorName)
             startActivity(intent)
         }
@@ -59,12 +58,15 @@ class ClinicReviewActivity : AppCompatActivity() {
     fun getRatingAverage() {
         var ratingReviews: List<Review>? = vm.reviewList.value
         var rating_avg: Float = 0F
+        Log.d("ABC", "To test rating review list")
+        Log.d("ABC", ratingReviews.toString())
         var counter: Int = 0
         if (ratingReviews != null) {
             ratingReviews.forEach {
                 counter += 1
                 rating_avg += it.rating
             }
+            rating_avg = rating_avg / counter
         }
 
         binding.reviewRatingBar.rating = rating_avg

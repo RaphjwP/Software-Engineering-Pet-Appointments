@@ -79,27 +79,27 @@
                             android:id="@+id/petName3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.name}" />
+                            android:text="Bhan" />
                         <TextView
                             android:id="@+id/txtVetName1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.age}" />
+                            android:text="3" />
                         <TextView
                             android:id="@+id/txtGender"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.gender}" />
+                            android:text="Male" />
                         <TextView
                             android:id="@+id/txtPetType"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.type}" />
+                            android:text="Dog" />
                         <TextView
                             android:id="@+id/txtPetBreed"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{bndPet.breed}" />
+                            android:text="Border Collie" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

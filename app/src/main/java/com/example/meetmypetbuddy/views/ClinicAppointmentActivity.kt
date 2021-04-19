@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.meetmypetbuddy.R
 import com.example.meetmypetbuddy.adapters.ReviewsAdapter
 import com.example.meetmypetbuddy.controllers.AppointmentController
-import com.example.meetmypetbuddy.controllers.ClinicReviewActivityController
+import com.example.meetmypetbuddy.controllers.ReviewController
 import com.example.meetmypetbuddy.databinding.ActivityClinicMenuBinding
 import com.example.meetmypetbuddy.databinding.ActivityUpcomingAppointmentsBinding
 import com.example.meetmypetbuddy.models.Review

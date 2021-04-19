@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnFAQ.setOnClickListener {
-            var intent = Intent(this, ProfileActivity::class.java)
+            var intent = Intent(this, FAQActivity::class.java)
             startActivity(intent)
         }
 

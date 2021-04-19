@@ -13,7 +13,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 
-class ClinicReviewActivityController : ViewModel(){
+class ReviewController : ViewModel(){
     var reviewList = MutableLiveData<List<Review>>()
 
     fun fetchReviewFromAPI(){
@@ -45,8 +45,9 @@ class ClinicReviewActivityController : ViewModel(){
         jsonObject.put("date", review.date)
         jsonObject.put("rating", review.rating)
         jsonObject.put("feedback_given", review.feedback_given)
-
         val jsonObjectString = jsonObject.toString()
+
+        Log.d("RPT", jsonObjectString);
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
         viewModelScope.launch {

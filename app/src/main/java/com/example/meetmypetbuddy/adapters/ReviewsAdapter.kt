@@ -24,6 +24,7 @@ class ReviewsAdapter (private val reviewers: List<Review>) : RecyclerView.Adapte
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
+
         var binding = ReviewRowLayoutBinding.inflate(inflater)
         return ReviewViewHolder(binding)
     }
@@ -36,4 +37,12 @@ class ReviewsAdapter (private val reviewers: List<Review>) : RecyclerView.Adapte
     override fun getItemCount(): Int {
         return reviewers.size
     }
+
+}
+
+fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
+    itemView.setOnClickListener {
+        event.invoke(getAdapterPosition(), getItemViewType())
+    }
+    return this
 }

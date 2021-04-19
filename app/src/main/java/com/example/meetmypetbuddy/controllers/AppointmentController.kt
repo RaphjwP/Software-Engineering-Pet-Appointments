@@ -72,10 +72,11 @@ class AppointmentController : ViewModel() {
         }
     }
 
-    fun getClinicAppointment(name: String) {
+    fun getClinicAppointment(clinic_name: String) {
+        Log.d("ABC", clinic_name)
         viewModelScope.launch {
             try {
-                val response = Api.retrofitService.getClinicsAppointment(name)
+                val response = Api.retrofitService.getClinicsAppointment(clinic_name)
                 if (response.isSuccessful && response.body() != null){
                     Log.d("ABC", "I got a response from the API")
                     Log.d("ABC", response.body()!!.toString())

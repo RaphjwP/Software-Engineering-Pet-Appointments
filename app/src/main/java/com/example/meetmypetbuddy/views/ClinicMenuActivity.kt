@@ -25,7 +25,7 @@ class ClinicMenuActivity : AppCompatActivity()  {
         }
 
         binding.btnMyClinic.setOnClickListener {
-            var intent = Intent(this, ProfileActivity::class.java)
+            var intent = Intent(this, ClinicFeedbackActivity::class.java)
             startActivity(intent)
         }
 
