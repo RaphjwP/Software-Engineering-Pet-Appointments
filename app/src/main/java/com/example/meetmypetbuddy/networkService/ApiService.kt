@@ -16,6 +16,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
+import java.util.*
 
 private const val BASE_URL = "https://mmpb-api.herokuapp.com/"
 
@@ -43,7 +44,7 @@ interface ApiService {
     suspend fun getUserAppointments(@Path("owner_name") owner_name: String ): Response<List<Appointment>>
 
     @GET("/appointments/clinics/{clinic_name}")
-    suspend fun getClinicsAppointment(@Path("clinic_name") clinic_name: String ): Response<List<Appointment>>
+    suspend fun getClinicsAppointment(@Path("clinic_name") clinic_name: String ) : Response<List<Appointment>>
 
     @POST("/appointments")
     suspend fun placeAnAppointment(@Body requestBody: RequestBody): Response<ResponseBody>
