@@ -51,7 +51,7 @@ class ScheduleActivity : AppCompatActivity()  {
             val user = UserTest()
             val pet = Pet("Murzik", 2, "Cat", "Male", "Siamese", "Lera's Hospitality", "Dr. Lera")
 
-            val appointment = Appointment(user.name, pet.type, pet.assigned_vet, pet.animal_clinic, "Trafalgar St. 124", calendar.time);
+            val appointment = Appointment(user.name, pet.type, pet.assigned_vet, pet.animal_clinic, "Trafalgar St. 124", calendar.time.toString());
             vm.placeAnAppointment(appointment)
 
             var intent = Intent(this, MainActivity::class.java)

@@ -23,7 +23,8 @@
                 android:id="@+id/imageView26"
                 android:layout_width="75dp"
                 android:layout_height="73dp"
-                app:srcCompat="@drawable/dog" />
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/scroll" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -48,14 +49,14 @@
                     android:id="@+id/textView74"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Breed:"
+                    android:text="Clinic "
                     android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/textView76"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Note: "
+                    android:text="Dr. Name:"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -69,25 +70,26 @@
                     android:id="@+id/textView79"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dog1" />
+                    android:text="@{bndAppointments.date.toString()}" />
 
                 <TextView
                     android:id="@+id/textView73"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dog1" />
+                    android:text="@{bndAppointments.pet_type}" />
 
                 <TextView
                     android:id="@+id/textView75"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Owner" />
+                    android:text="@{bndAppointments.clinic_name}"/>
+
 
                 <TextView
                     android:id="@+id/textView77"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Description of the problem test" />
+                    android:text="@{bndAppointments.doctor_name}" />
             </LinearLayout>
 
             <ImageView

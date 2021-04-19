@@ -4,12 +4,15 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.meetmypetbuddy.databinding.AppointmentRowLayoutBinding
 import com.example.meetmypetbuddy.databinding.ClinicHistoryRowLayoutBinding
 import com.example.meetmypetbuddy.databinding.PetRowLayoutBinding
+import com.example.meetmypetbuddy.databinding.ReviewRowLayoutBinding
 import com.example.meetmypetbuddy.models.Appointment
 import com.example.meetmypetbuddy.models.Pet
+import com.example.meetmypetbuddy.models.Review
 
-class AppointmentsViewHodler(private val binding: ClinicHistoryRowLayoutBinding) : RecyclerView.ViewHolder(binding.root){
+class AppointmentsViewHodler(private val binding: AppointmentRowLayoutBinding) : RecyclerView.ViewHolder(binding.root){
     fun bind(p: Appointment){
         binding.bndAppointments = p
         binding.executePendingBindings()
@@ -17,21 +20,22 @@ class AppointmentsViewHodler(private val binding: ClinicHistoryRowLayoutBinding)
 }
 
 
-class AppointmentsAdapter(val appointments:MutableList<Appointment>, val context: Context)
-    : RecyclerView.Adapter<AppointmentsViewHodler>(){
+class AppointmentsAdapter(val appointments: List<Appointment>) : RecyclerView.Adapter<AppointmentsViewHodler>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppointmentsViewHodler {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ClinicHistoryRowLayoutBinding.inflate(layoutInflater, parent, false)
-
+        val context = parent.context
+        val inflater = LayoutInflater.from(context)
+        var binding = AppointmentRowLayoutBinding.inflate(inflater)
         return AppointmentsViewHodler(binding)
+    }
+
+
+    override fun onBindViewHolder(holder: AppointmentsViewHodler, position: Int) {
+        val appointment : Appointment  = appointments.get(position)
+        holder?.bind(appointment)
     }
 
     override fun getItemCount(): Int {
         return appointments.size
     }
 
-    override fun onBindViewHolder(holder: AppointmentsViewHodler, position: Int) {
-        val currAppointment = this.appointments.get(position)
-        holder?.bind(currAppointment)
-    }
 }

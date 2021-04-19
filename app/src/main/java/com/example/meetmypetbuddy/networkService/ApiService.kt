@@ -18,6 +18,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
+import java.util.*
 
 private const val BASE_URL = "https://mmpb-api.herokuapp.com/"
 
@@ -37,12 +38,19 @@ private val retrofit = Retrofit.Builder().addConverterFactory(MoshiConverterFact
 interface ApiService {
     @GET("/review/api/reviews")
     suspend fun getReviews(): Response<List<Review>>
+
     @GET("/appointments")
     suspend fun getAppointments(): Response<List<Appointment>>
+
     @GET("/appointments/{owner_name}")
     suspend fun getUserAppointments(@Path("owner_name") owner_name: String ): Response<List<Appointment>>
+
+    @GET("/appointments/clinics/{clinic_name}")
+    suspend fun getClinicsAppointment(@Path("clinic_name") clinic_name: String ) : Response<List<Appointment>>
+
     @POST("/appointments")
     suspend fun placeAnAppointment(@Body requestBody: RequestBody): Response<ResponseBody>
+
     @POST("/review/api/reviews")
     suspend fun insertReview(@Body requestBody: RequestBody) : Response<ResponseBody>
     @POST("/msg/api/")

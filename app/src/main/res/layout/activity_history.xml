@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,6 +29,8 @@
             android:layout_weight="1"
             tools:listitem="@layout/user_histroy_row_layout"/>
 
+        android:orientation="vertical"
+        android:gravity="center">
 
         <!--        <LinearLayout-->
 <!--            android:layout_width="wrap_content"-->
@@ -168,6 +169,12 @@
 <!--                        tools:layout_editor_absoluteX="130dp"-->
 <!--                        tools:layout_editor_absoluteY="318dp" />-->
 <!--                </LinearLayout>-->
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clinic History"
+            android:textSize="24sp" />
 
 
 <!--                <TextView-->
@@ -262,8 +269,16 @@
             android:layout_margin="50dp"
             android:text="schedule Appointment" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPets"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/appointment_row_layout"/>
 
-        </LinearLayout>
+    </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
