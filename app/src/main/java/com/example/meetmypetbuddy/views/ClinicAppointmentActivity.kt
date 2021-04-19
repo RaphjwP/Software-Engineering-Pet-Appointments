@@ -27,7 +27,6 @@ class ClinicAppointmentActivity : AppCompatActivity(){
         this.binding = ActivityUpcomingAppointmentsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         Log.d("ABC", "Calling the api from the main activity!")
         vm.getClinicAppointment("Lera's Hospitality");
 
@@ -40,5 +39,6 @@ class ClinicAppointmentActivity : AppCompatActivity(){
         }
 
         vm.appointmentList.observe(this, appointmentDataChanged)
+
     }
 }
