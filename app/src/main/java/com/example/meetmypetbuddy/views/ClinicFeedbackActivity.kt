@@ -40,8 +40,4 @@ class ClinicFeedbackActivity : AppCompatActivity() {
 
     }
 
-//    val itemOnClick: (View, Int, Int) -> Unit = { view, position, type ->
-//        Log.d("TAG", "test")
-//    }
-
 }

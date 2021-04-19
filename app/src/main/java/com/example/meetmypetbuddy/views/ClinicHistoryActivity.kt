@@ -1,5 +1,6 @@
 package com.example.meetmypetbuddy.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
@@ -22,6 +23,10 @@ class ClinicHistoryActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         this.binding = ActivityClinicHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.btnNote.setOnClickListener {
+            var intent = Intent(this, AddNoteActivity::class.java)
+            startActivity(intent)
+        }
 
         Log.d("ABC", "Calling the api from the main activity!")
         vm.getClinicAppointment("Lera's Hospitality");

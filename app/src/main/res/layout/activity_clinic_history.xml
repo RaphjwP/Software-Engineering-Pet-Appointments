@@ -10,14 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_margin="10dp">
         <TextView
             android:id="@+id/textView69"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Clinic History"
             android:textSize="24sp" />
+
         <ImageView
+            android:id="@+id/btnNote"
             android:layout_width="32dp"
             android:layout_height="33dp"
             android:layout_marginStart="170dp"
